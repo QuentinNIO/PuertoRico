@@ -35,6 +35,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var countHuit: UILabel!
     @IBOutlet weak var countHuitBis: UILabel!
     @IBOutlet weak var countNeuf: UILabel!
+    @IBOutlet weak var countDix: UILabel!
+    @IBOutlet weak var countDixBis: UILabel!
+    @IBOutlet weak var countDixTer: UILabel!
     
     @IBOutlet weak var playerUn: UILabel!
     @IBOutlet weak var playerDeux: UILabel!
@@ -53,114 +56,112 @@ class ViewController: UIViewController {
     }
     
     func batDeux(){
-//      "Chantier ; Forestière ; Marché Noir ; Hacienda"
-        let countNumberTwo = arc4random_uniform(6) + 1
+//        Hacienda || Marché Noir
+//        Baraque de Chantier || Baraque Forestière
+        let countNumberTwo = arc4random_uniform(4) + 1
         if countNumberTwo == 1 {
-            countDeux.text = "Chantier"
-            countDeuxBis.text = "Forestière"
+            countDeux.text = "B. Chantier"
+            countDeuxBis.text = "Hacienda"
         } else if countNumberTwo == 2 {
-            countDeux.text = "Chantier"
+            countDeux.text = "B. Chantier"
             countDeuxBis.text = "Marché Noir"
         } else if countNumberTwo == 3 {
-            countDeux.text = "Chantier"
+            countDeux.text = "B. Forestière"
             countDeuxBis.text = "Hacienda"
         } else if countNumberTwo == 4 {
-            countDeux.text = "Forestière"
+            countDeux.text = "B. Forestière"
             countDeuxBis.text = "Marché Noir"
-        } else if countNumberTwo == 5 {
-            countDeux.text = "Forestière"
-            countDeuxBis.text = "Hacienda"
-        } else if countNumberTwo == 6 {
-            countDeux.text = "Marché Noir"
-            countDeuxBis.text = "Hacienda"
         }
     }
     
     func batTrois(){
-        //      "Petit Entrepot ; Boutique"
-        let countNumberThree = arc4random_uniform(2) + 1
+        //      "Petit Entrepot ; Boutique ; Chapelle"
+        let countNumberThree = arc4random_uniform(3) + 1
         if countNumberThree == 1 {
             countTrois.text = "Petit Entrepot"
-        } else {
+        } else if countNumberThree == 2 {
             countTrois.text = "Boutique"
+        } else if countNumberThree == 3 {
+            countTrois.text = "Chapelle"
         }
     }
     
     func batQuatre(){
-        //      "Hospice ; Pension"
-        let countNumberFour = arc4random_uniform(2) + 1
+        //      "Hospice ; Pension ; Pavillon de chasse"
+        let countNumberFour = arc4random_uniform(3) + 1
         if countNumberFour == 1 {
             countQuatre.text = "Hospice"
-        } else {
+        } else if countNumberFour == 2 {
             countQuatre.text = "Pension"
+        } else if countNumberFour == 3 {
+            countQuatre.text = "P. De Chasse"
         }
     }
     
     func batCinq(){
-        //      "Comptoir ; Grd Marché ; Commerce ; Eglise"
+        //      "Comptoir ; Commerce"
+        //      "Grd Marché ; Eglise ; Architecte"
         let countNumberFive = arc4random_uniform(6) + 1
         if countNumberFive == 1 {
             countCinq.text = "Comptoir"
             countCinqBis.text = "Grd Marché"
         } else if countNumberFive == 2 {
             countCinq.text = "Comptoir"
-            countCinqBis.text = "Commerce"
+            countCinqBis.text = "Eglise"
         } else if countNumberFive == 3 {
             countCinq.text = "Comptoir"
-            countCinqBis.text = "Eglise"
+            countCinqBis.text = "Architecte"
         } else if countNumberFive == 4 {
-            countCinq.text = "Grd Marché"
-            countCinqBis.text = "Commerce"
+            countCinq.text = "Commerce"
+            countCinqBis.text = "Grd Marché"
         } else if countNumberFive == 5 {
-            countCinq.text = "Grd Marché"
+            countCinq.text = "Commerce"
             countCinqBis.text = "Eglise"
         } else if countNumberFive == 6 {
             countCinq.text = "Commerce"
-            countCinqBis.text = "Eglise"
+            countCinqBis.text = "Architecte"
         }
     }
     
     func batSix(){
-        //      "Grd Entrepot ; Pt Quai"
+        //      "Fournisseur ; Pt Quai"
         let countNumberSix = arc4random_uniform(2) + 1
         if countNumberSix == 1 {
             countSix.text = "Petit Quai"
         } else {
-            countSix.text = "Grd Entrepot"
+            countSix.text = "Fournisseur"
         }
     }
     
     func batSept(){
-        //      "Manufacture ; Phare"
-        let countNumberSeven = arc4random_uniform(2) + 1
+        //      "Manufacture ; Atelier ; Joaillerie"
+        let countNumberSeven = arc4random_uniform(3) + 1
         if countNumberSeven == 1 {
             countSept.text = "Manufacture"
-        } else {
-            countSept.text = "Phare"
+        } else if countNumberSeven == 2 {
+            countSept.text = "Atelier"
+        } else if countNumberSeven == 3 {
+            countSept.text = "Joaillerie"
         }
     }
     
     func batHuit(){
-        //      "Port ; Université ; Bibliothèque ; Atelier"
-        let countNumberEight = arc4random_uniform(6) + 1
+        //      "Phare Port
+        //      "Université ; Bibliothèque
+
+        let countNumberEight = arc4random_uniform(4) + 1
         if countNumberEight == 1 {
-            countHuit.text = "Port"
+            countHuit.text = "Phare"
             countHuitBis.text = "Université"
         } else if countNumberEight == 2 {
-            countHuit.text = "Port"
+            countHuit.text = "Phare"
             countHuitBis.text = "Bibliothèque"
         } else if countNumberEight == 3 {
             countHuit.text = "Port"
-            countHuitBis.text = "Atelier"
+            countHuitBis.text = "Université"
         } else if countNumberEight == 4 {
-            countHuit.text = "Université"
+            countHuit.text = "Port"
             countHuitBis.text = "Bibliothèque"
-        } else if countNumberEight == 5 {
-            countHuit.text = "Université"
-            countHuitBis.text = "Atelier"
-        } else if countNumberEight == 6 {
-            countHuit.text = "Bibliothèque"
-            countHuitBis.text = "Atelier"
         }
     }
     
@@ -171,6 +172,36 @@ class ViewController: UIViewController {
             countNeuf.text = "Quai"
         } else {
             countNeuf.text = "Syndicat"
+        }
+    }
+    
+    func batDixUno(){
+        //      "Guilde ; Statue"
+        let countNumberTenUno = arc4random_uniform(2) + 1
+        if countNumberTenUno == 1 {
+            countDix.text = "Guilde"
+        } else {
+            countDix.text = "Statue"
+        }
+    }
+    
+    func batDixDos(){
+        //      "Forteresse ; Jardins Royaux"
+        let countNumberTenDos = arc4random_uniform(2) + 1
+        if countNumberTenDos == 1 {
+            countDixBis.text = "Forteresse"
+        } else {
+            countDixBis.text = "Jardins Royaux"
+        }
+    }
+    
+    func batDixTres(){
+        //      "Résidence ; Cloître"
+        let countNumberTenTres = arc4random_uniform(2) + 1
+        if countNumberTenTres == 1 {
+            countDixTer.text = "Résidence"
+        } else {
+            countDixTer.text = "Cloître"
         }
     }
     
@@ -199,6 +230,9 @@ class ViewController: UIViewController {
         batSept()
         batHuit()
         batNeuf()
+        batDixUno()
+        batDixDos()
+        batDixTres()
         players()
     }
 
